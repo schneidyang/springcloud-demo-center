@@ -1,0 +1,15 @@
+server:
+  port: 10000
+spring:
+  application:
+    name: springcloud-center
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
+    instance-id:  localhost:${server.port}
+  client:
+    service-url:
+      default-Zone: http://localhost:${server.port}/eureka/
+    fetch-registry: false
+    register-with-eureka: false
